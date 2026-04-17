@@ -32,7 +32,7 @@ The footer displays a single status line:
 - **Path & branch** — shows `cwd` with `~` abbreviation and current git branch
 - **Context usage** — token count / context window with color-coded percentage (green → yellow → red)
 - **Model & thinking level** — active model ID and current thinking setting
-- **Extension statuses** — renders any additional extension status lines below the main bar
+- **Extension statuses** — renders any additional extension status lines below the main bar. Multi-line status values (containing `\n`) are split into separate rows.
 
 ## Development
 

@@ -39,7 +39,9 @@ export default function (pi: ExtensionAPI) {
 
 					const statuses = footerData.getExtensionStatuses();
 					for (const [, value] of statuses) {
-						lines.push(truncateToWidth(value, width));
+						for (const line of value.split(/\r?\n/)) {
+							lines.push(truncateToWidth(line, width));
+						}
 					}
 
 					return lines;
