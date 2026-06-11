@@ -37,7 +37,7 @@ export default function (pi: ExtensionAPI) {
 
 					// -- Lines 2+: one per extension status --
 
-					const statuses = footerData.getExtensionStatuses();
+					const statuses = [...footerData.getExtensionStatuses()].sort(([a], [b]) => a.localeCompare(b));
 					for (const [, value] of statuses) {
 						for (const line of value.split(/\r?\n/)) {
 							lines.push(truncateToWidth(line, width));
