@@ -26,8 +26,10 @@ export default function (pi: ExtensionAPI) {
 					const contextStr = theme.fg(contextColor as any, `${fmt(tokens)}/${fmt(window)} (${pct}%)`);
 
 					const model = ctx.model?.id ?? "no-model";
+					const provider = ctx.model?.provider;
+					const modelStr = provider ? `${provider}/${model}` : model;
 					const thinking = pi.getThinkingLevel();
-					const right = theme.fg("muted", `${model} (${thinking})`);
+					const right = theme.fg("muted", `${modelStr} (${thinking})`);
 
 					const gap1 = " ".repeat(Math.max(2, width - visibleWidth(left) - visibleWidth(contextStr) - visibleWidth(right) - 4));
 					const gap2 = "  ";
