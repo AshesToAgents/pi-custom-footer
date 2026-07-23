@@ -1,6 +1,6 @@
 # pi-custom-footer
 
-A [pi](https://github.com/earendil-works/pi-coding-agent) extension that replaces the default footer with a custom status bar showing working directory, git branch, context usage, and model info.
+A [pi](https://github.com/earendil-works/pi) extension that replaces the default footer with a custom status bar showing working directory, git branch, context usage, and model info.
 
 ## Install
 
