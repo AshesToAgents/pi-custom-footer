@@ -15,7 +15,7 @@ export default function (pi: ExtensionAPI) {
 
 					const branch = footerData.getGitBranch();
 					const branchStr = branch ? ` (${branch})` : "";
-					const cwd = process.cwd().replace(process.env.HOME ?? "", "~");
+					const cwd = ctx.cwd.replace(process.env.HOME ?? "", "~");
 					const left = theme.fg("dim", `pi ${VERSION}`) + "  " + theme.fg("accent", `${cwd}${branchStr}`);
 
 					const usage = ctx.getContextUsage();
